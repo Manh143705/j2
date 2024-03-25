@@ -80,7 +80,7 @@ private List<Staff> list = new ArrayList<>();
         return;
     }
     boolean gioiTinhNam = rbnNam.isSelected();
-    boolean gioiTinhNu = rbnNu.isSelected(); // Giả sử rbnNu là tên biến của radio button cho giới tính nữ
+    boolean gioiTinhNu = rbnNu.isSelected();
     if (maNV.isEmpty() || tenNV.isEmpty()) {
         JOptionPane.showMessageDialog(this, "Mã nhân viên và tên không được để trống!");
         return;
@@ -89,7 +89,7 @@ private List<Staff> list = new ArrayList<>();
         JOptionPane.showMessageDialog(this, "Bạn phải chọn giới tính!");
         return;
     }
-    Staff nv = new Staff(maNV, tenNV, gioiTinhNam, thamNien); // Giả sử Staff chỉ chấp nhận giới tính nam là true hoặc false
+    Staff nv = new Staff(maNV, tenNV, gioiTinhNam, thamNien);
     int confirmResult = JOptionPane.showConfirmDialog(this, "Bạn có chắc chắn muốn thêm nhân viên này?", "Xác nhận", JOptionPane.YES_NO_OPTION);
     if (confirmResult == JOptionPane.YES_OPTION) {
         list.add(nv);
@@ -156,7 +156,7 @@ public void showDetail() {
 }
 
     @SuppressWarnings("unchecked")
-    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
+    
     private void initComponents() {
 
         jScrollPane1 = new javax.swing.JScrollPane();
@@ -201,7 +201,7 @@ public void showDetail() {
             }
         });
 
-        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 18));
         jLabel1.setText("Quản Lý Nhân Viên");
 
         jLabel8.setText("Mã nhân viên");
